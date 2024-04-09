@@ -30,8 +30,7 @@ class _HomeState extends State<Home> {
     const dateStyle = TextStyle(fontSize: 18);
 
     return Scaffold(
-      body: SafeArea(
-          child: Container(
+      body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/$bgImg.jpg'),
@@ -59,7 +58,8 @@ class _HomeState extends State<Home> {
                     icon: const Icon(Icons.location_on_outlined),
                     label: const Text(
                       'Edit location',
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                     style: ButtonStyle(
                       foregroundColor:
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
-      )),
+      ),
     );
   }
 }
