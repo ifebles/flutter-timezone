@@ -24,11 +24,15 @@ class _TextDateTimeState extends State<TextDateTime> {
     Future.doWhile(() async {
       await Future.delayed(const Duration(seconds: 1));
 
-      setState(() {
-        currentTime = currentTime.add(const Duration(seconds: 1));
-      });
+      if (mounted) {
+        setState(() {
+          currentTime = currentTime.add(const Duration(seconds: 1));
+        });
 
-      return true;
+        return true;
+      }
+
+      return false;
     });
   }
 

@@ -17,11 +17,11 @@ class LocationCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/', arguments: {
-                      'timezone': timezone,
-                    });
-                  },
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                      context, '/', (route) => false,
+                      arguments: {
+                        'timezone': timezone,
+                      }),
                   child: const Text('Select'),
                 ),
               ),
